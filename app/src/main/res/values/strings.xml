@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Conclusion</string>
+    <string name="tab_menu_home">主页</string>
+    <string name="tab_menu_interests">兴趣</string>
+    <string name="tab_menu_profile">信息</string>
+    <string name="profile_menu_friend">好友</string>
+    <string name="profile_menu_collect">收藏</string>
+    <string name="profile_menu_information">消息</string>
+    <string name="profile_menu_history">觀看歷史</string>
+    <string name="profile_menu_share">分享</string>
+    <string name="profile_menu_play">兴趣</string>
+    <string name="profile_menu_setting">设置</string>
+</resources>

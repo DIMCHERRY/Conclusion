@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:orientation="horizontal"
+    android:background="@color/text_blue">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:layout_weight="1"
+        android:src="@mipmap/back" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:layout_weight="1"
+        android:text="登入 "
+        android:textColor="#fff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/title_register"
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:layout_weight="1"
+        android:text="注册 "
+        android:textColor="#fff"
+        android:textSize="24sp" />
+
+
+</LinearLayout>
