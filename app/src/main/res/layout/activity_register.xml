@@ -17,7 +17,21 @@
         android:src="@mipmap/back" />
 
     <EditText
-        android:id="@+id/et_phone"
+        android:id="@+id/et_register_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:drawableBottom="@drawable/shape_bottom_line"
+        android:drawablePadding="10dp"
+        android:hint="请输入昵称"
+        android:inputType="textPersonName"
+        android:maxLength="11"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/et_register_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -31,7 +45,7 @@
         android:padding="10dp" />
 
     <EditText
-        android:id="@+id/et_password"
+        android:id="@+id/et_register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -45,7 +59,7 @@
         android:padding="10dp" />
 
     <EditText
-        android:id="@+id/et_password_check"
+        android:id="@+id/et_register_password_check"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -54,7 +68,7 @@
         android:drawableBottom="@drawable/shape_bottom_line"
         android:drawablePadding="10dp"
         android:hint="请确认密码"
-        android:inputType="number"
+        android:inputType="textPassword"
         android:maxLength="11"
         android:padding="10dp" />
 

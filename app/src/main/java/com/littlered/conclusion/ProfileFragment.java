@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,6 +35,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             case R.id.iv_h_head:
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
                 startActivity(intent);
+                break;
         }
     }
 }
