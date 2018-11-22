@@ -1,8 +1,8 @@
 package com.littlered.conclusion.utils;
 
-import android.provider.SyncStateContract;
-
+import com.littlered.conclusion.api.ImageListApi;
 import com.littlered.conclusion.api.LoginApi;
+import com.littlered.conclusion.api.RegisterApi;
 import com.littlered.conclusion.bean.ConstantsUrl;
 
 import java.util.ArrayList;
@@ -17,10 +17,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class RetrofitUtils {
-    private static RetrofitUtils retrofitUtils;
     private static LoginApi loginApi;
+    private static RegisterApi registerApi;
+    private static ImageListApi imageListApi;
     //声明私有构造方法,利于单例模式,让调用者无法new出对象,只能通过构造这模式创建对象
-    public RetrofitUtils(){
+    RetrofitUtils(){
 
     }
 
@@ -28,6 +29,8 @@ public class RetrofitUtils {
     public LoginApi getTsetService(){
         return loginApi;
     }
+    public RegisterApi getRegisterApi(){return registerApi;}
+    public ImageListApi getImageListApi(){return  imageListApi;}
 
     public static class Builder{
         List<CallAdapter.Factory> callAdapterFactories = new ArrayList<>();
@@ -68,11 +71,13 @@ public class RetrofitUtils {
             }
 
             //第一步创建retrofit对象
-            Retrofit retrofit = builder.client(okHttpClient).baseUrl(ConstantsUrl.Base_url).build();
+            Retrofit retrofit = builder.client(okHttpClient).baseUrl(ConstantsUrl.base_url).build();
             //第二步创建RxJava
             loginApi = retrofit.create(LoginApi.class);
+            registerApi =retrofit.create(RegisterApi.class);
+            imageListApi = retrofit.create(ImageListApi.class);
             //第三步请求逻辑，提供给外部访问
-            retrofitUtils = new RetrofitUtils();
+            RetrofitUtils retrofitUtils = new RetrofitUtils();
             return retrofitUtils;
         }
     }

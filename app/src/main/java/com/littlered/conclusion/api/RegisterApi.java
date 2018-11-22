@@ -8,7 +8,7 @@ import retrofit2.http.Body;
 import retrofit2.http.POST;
 import retrofit2.http.Url;
 
-public interface LoginApi {
+public interface RegisterApi {
     @POST
-    Call<BaseData<Data>> postRetrofit(@Url String url, @Body LoginReq map);
+    Call<BaseData<Data>> postRegisterRetrofit(@Url String url, @Body RegisterReq mapRegister);
 }
